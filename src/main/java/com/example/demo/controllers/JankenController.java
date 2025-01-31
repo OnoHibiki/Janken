@@ -10,7 +10,7 @@ import java.util.Random;
 @Controller
 public class JankenController {
     
-    @GetMapping("/demo")
+    @GetMapping("/")
     public String playJunken(@RequestParam(name = "hand", required = false) String userHand,Model model){
             String[] hands = {"グー","チョキ","パー"};
             Random rand = new Random();
@@ -33,7 +33,7 @@ public class JankenController {
             model.addAttribute("aiHand",aiHand);
             model.addAttribute("result", result);
 
-            return "Janken"; //Janken.html　を表示
+            return "janken"; //Janken.html　を表示
 
     }
 
