@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>じゃんけんゲーム</title>
-    <link rel="stylesheet" th:href="@{/css/janken.css}">
+    <link rel="stylesheet" href="/css/janken.css">
 </head>
 
 <body>
@@ -21,7 +21,7 @@
 
     <script>
         function playJanken(hand){
-            window.location.href = "/demo?hand=" + hand ;
+            window.location.href = "/?hand=" + hand ;
         }
     </script>
 
