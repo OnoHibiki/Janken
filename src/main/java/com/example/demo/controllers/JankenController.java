@@ -10,7 +10,7 @@ import java.util.Random;
 @Controller
 public class JankenController {
     
-    @GetMapping("/")
+    @GetMapping("")
     public String playJunken(@RequestParam(name = "hand", required = false) String userHand,Model model){
             String[] hands = {"グー","チョキ","パー"};
             Random rand = new Random();
