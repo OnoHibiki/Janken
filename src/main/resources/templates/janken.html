@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang = "ja" xmlns:th = "http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>じゃんけんゲーム</title>
+    <link rel="stylesheet" th:href="@{/css/janken.css}">
+</head>
+
+<body>
+    <h1>じゃんけんゲーム</h1>
+    <p>あなたの手を選んでください</p>
+    <button class="btn" onclick="playJanken('グー')">✊ グー</button>
+    <button class="btn" onclick="playJanken('チョキ')">✌️ チョキ</button>
+    <button class="btn" onclick="playJanken('パー')">✋ パー</button>
+
+    <div class="result">
+        <p th:if="${userHand}" th:text="'あなた:' + ${userHand}"></p>
+        <p th:if="${aiHand}"   th:text="'相手:' + ${aiHand}"></p>
+        <p th:if="${result}" th:text="${result}"></p>
+    </div>
+
+    <script>
+        function playJanken(hand){
+            window.location.href = "/demo?hand=" + hand ;
+        }
+    </script>
+
+</body>
+
+
+</html>
