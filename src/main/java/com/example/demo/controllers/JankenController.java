@@ -11,7 +11,7 @@ import java.util.Random;
 public class JankenController {
     
     @GetMapping("/")
-    public String playJunken(@RequestParam(name = "hand", required = false) String userHand,Model model){
+    public  String playJunken(@RequestParam(name = "hand", required = false) String userHand,Model model){
             String[] hands = {"グー","チョキ","パー"};
             Random rand = new Random();
             String aiHand = hands[rand.nextInt(3)];
